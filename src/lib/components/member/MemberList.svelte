@@ -7,7 +7,7 @@
   <h2>Meet Our Members</h2>
   <div class="member-grid">
     {#each nodes as card}
-      <MemberCard link={card.fields.slug} {...card.frontmatter} />
+      <MemberCard node={card} />
     {/each}
   </div>
 </section>

@@ -1,7 +1,6 @@
 <script>
-  export let socialImage;
-  export let name;
-  export let link;
+  export let node;
+  const { socialImage, name, link} = node.meta;
 </script>
 
 <div class="member-card">

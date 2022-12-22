@@ -8,6 +8,10 @@
 .layout {
     display: flex;
 
+    main {
+      margin-left: 2rem;
+    }
+
     slot {
         display: block;
     }

@@ -14,3 +14,9 @@
     <Copyright />
   </div>
 </aside>
+
+<style lang="scss">
+  .sidebar {
+    width: 25vw;
+  }
+</style>
