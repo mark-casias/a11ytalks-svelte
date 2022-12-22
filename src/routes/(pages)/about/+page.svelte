@@ -1,0 +1,30 @@
+<script>
+  export let data;
+</script>
+
+<h1>About</h1>
+
+<h2>Meet our Members</h2>
+
+<ul>
+  {#each data.posts as post }
+    <li>
+      <h2>
+        <a href={post.path}>
+          {post.meta.name}
+        </a>
+      </h2>
+    </li>
+  {/each}
+</ul>
+
+<h2>About A11yTalks</h2>
+
+<ul>
+  <li>A11yTalks was started in 2017 by [Carie Fisher](https://twitter.com/cariefisher) to help bridge the gap between developers and accessibility professionals. Not long after, [Donna Bungard](https://twitter.com/dbungard) and [AmyJune Hineline](https://twitter.com/volkswagenchick) joined the team and really helped this project get off the ground. Now in 2022 we have grown to nine members!</li>
+
+  <li>A11yTalks seeks to provide a friendly, safe environment. All participants should be able to engage in productive dialogue. They should share and learn with each other in an atmosphere of mutual respect. We require all participants to adhere to our [Code of Conduct](/pages/conduct). This applies to all community interactions and events.</li>
+
+  <li>We make a conscious effort to include PwD, BIPOC, LGBTQIA+, women, and other marginalized groups in tech in our speaker line-up. Please let us know if you have ideas on how to make A11yTalks more friendly to all!</li>
+
+</ul>

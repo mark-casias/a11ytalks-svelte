@@ -1,0 +1,39 @@
+{
+  "name": "a11y-svelte",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "develop": "concurrently \"npm:dev\" \"npm:storybook\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-interactions": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-vite": "^0.2.5",
+    "@storybook/svelte": "^6.5.14",
+    "@storybook/testing-library": "^0.0.13",
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "babel-loader": "^8.3.0",
+    "mdsvex": "^0.10.6",
+    "sass": "^1.56.1",
+    "svelte": "^3.55.0",
+    "svelte-loader": "^3.1.4",
+    "svelte-markdown": "^0.2.3",
+    "svelte-paginate": "^0.1.0",
+    "svelte-preprocess": "^4.10.7",
+    "vite": "^3.2.4"
+  },
+  "type": "module",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "date-fns": "^2.29.3"
+  }
+}

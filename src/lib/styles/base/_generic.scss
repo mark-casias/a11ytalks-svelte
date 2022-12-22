@@ -1,0 +1,342 @@
+/**
+ * Generic
+ */
+@import '../global/utils';
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+html {
+  font-size: $typographic-root-font-size;
+}
+
+body {
+  margin: 0 0 0 calc(100vw - 100%);
+  font-family: $typographic-font-family;
+  line-height: $typographic-base-line-height;
+  font-size: $typographic-base-font-size;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $color-black;
+  color: $color-white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $typographic-font-family;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: $typographic-base-font-size * 2.2;
+  line-height: 2;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: $typographic-base-font-size * 1.6875;
+  line-height: 1.5;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+
+h3 {
+  font-size: $typographic-base-font-size * 1.375;
+  line-height: 1;
+  margin-top:2rem;
+  margin-bottom: .5rem;
+}
+
+h4 {
+  font-size: $typographic-base-font-size * 1.2;
+  line-height: 1rem;
+  margin-top:1.5rem;
+  margin-bottom: .5rem;
+}
+
+h5 {
+  font-size: $typographic-base-font-size;
+  line-height: 1rem;
+  margin-top:2.5rem;
+  margin-bottom: .5rem;
+}
+
+h6 {
+  font-size: $typographic-base-font-size;
+  line-height: 1rem;
+  margin-top:2.5rem;
+  margin-bottom: .5rem;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  display: block;
+  margin: inherit auto;
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 0;
+  color: $color-base;
+  display: block;
+  height: 26px;
+  margin-right: auto;
+  margin-left: auto;
+  background-size: 100% 26px;
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, $color-accent 11px, $color-accent 15px, transparent 15px, transparent 26px);
+  width: 100px;
+  clear: both;
+}
+
+a {
+  color: $typographic-link-p-font-color;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $typographic-link-s-font-color;
+    text-decoration: underline;
+  }
+
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+ul {
+  list-style: square;
+  margin-bottom: 1;
+
+  & li {
+    padding: 0 5px;
+    margin-bottom: 10px;
+  }
+
+}
+
+p {
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  padding: 0;
+  font-style: italic;
+  text-align: center;
+}
+
+figure {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  line-height: .75;
+  margin-top:.25rem;
+  color: $color-base;
+  font-size: $typographic-small-font-size;
+  font-style: italic;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.anchor {
+  margin-left: -30px !important;
+  padding-right: 14px !important;
+}
+
+iframe {
+  width: 100%;
+  margin-top: 1.625rem;
+  min-width: auto;
+  min-height: 365px;
+  border: 1px solid $color-black;
+}
+
+p {
+  text-align: left;
+}
+
+.social-image {
+  float: left;
+  margin-right: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  border: 4px solid $color-accent;
+  border-radius: 50%;
+}
+
+img.social-image {
+  width: 100%;
+  height: 100%;
+  max-width: 175px;
+  max-height: 175px;
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+}
+
+.social-image-next {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  border: 4px solid $color-accent;
+  border-radius: 50%;
+}
+
+img.social-image-next {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+}
+
+time.post__item-date {
+  font-size: $typographic-base-font-size;
+  color: $color-gray;
+  font-weight: 600;
+  text-transform: uppercase;
+  float: none;
+  clear: both;
+
+  @include breakpoint-md {
+    float: left;
+  }
+}
+
+.calendar {
+  margin: 0 -10px;
+  margin-bottom: .5rem;
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+  text-align: center !important;
+
+  & li {
+    display: inline-block;
+    margin: 10px 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    float: none !important;
+
+    & a {
+      display: inline-block;
+      height: $button-height;
+      padding: 0 24px;
+      line-height: $button-height;
+      border: 1px solid $color-gray-border;
+      text-decoration: none;
+      border-radius: $button-border-radius;
+      color: $color-base;
+      background: $color-accent;
+      color: $color-black;
+
+      &:hover,
+      &:focus {
+        background: $color-gray-bg;
+        color: $color-black;
+        text-decoration: underline;
+      }
+
+    }
+
+  }
+}
+
+@include breakpoint-sm {
+  figure.float-left,
+  figure.float-right {
+    max-width: 310px;
+   padding: 0 1rem;
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  .float-left {
+    float: left;
+  }
+
+  iframe {
+    min-width: 650px;
+    min-height: 365px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+
+  body {
+    background: $color-white;
+    color: $color-black;
+  }
+}
+
+.centered {
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  @include breakpoint-md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    text-align: center;
+    margin: .25rem;
+    padding: .5rem;
+    p {
+      text-align: center;
+      margin-bottom: 0;
+
+      &.large {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+table.centered {
+  margin: 1rem auto;
+}
+
+td {
+  text-align: center;
+  &.left {
+    text-align: left;
+  }
+  &.right {
+    text-align: right;
+  }
+}
+
+.inverse {
+  color: white;
+  background: black;
+}
+
+.button {
+  border: 1px solid $color-accent;
+  border-radius: 5px;
+  padding: .5rem;
+}

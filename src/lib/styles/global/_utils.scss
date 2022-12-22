@@ -1,0 +1,30 @@
+@import './mixins';
+@import './variables';
+
+:global {
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 0;
+    color: $color-base;
+    display: block;
+    height: 26px;
+    margin-right: auto;
+    margin-left: auto;
+    background-size: 100% 26px;
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, $color-accent 11px, $color-accent 15px, transparent 15px, transparent 26px);
+    width: 100px;
+    clear: both;
+  }
+
+
+}
