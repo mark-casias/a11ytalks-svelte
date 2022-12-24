@@ -15,17 +15,17 @@
 <style lang="scss">
 @import '../../../styles/global/utils';
 .contacts {
+  text-align: center;
   margin-bottom: 1rem;
 
   &__list {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
     flex-flow: row wrap;
-    flex-grow: 0;
-    flex-shrink: 0;
     list-style: none;
     padding: 0;
     margin: 10px -3px;
-    width: 200px;
+    width: 100%;
 
     &-item {
       display: flex;
@@ -55,8 +55,7 @@
 
   }
 
-  @media (prefers-color-scheme: light) {
-    &__list-item-link {
+  @media (prefers-color-scheme: light) {    &__list-item-link {
       color: $color-black;
       background: $color-gray-bg;
     }

@@ -23,12 +23,13 @@
 
   &__title {
     font-size: $typographic-base-font-size * 2.5;
-    font-weight: 600;
-    line-height: 1.125rem;
+
+    line-height: 1.5rem;
     margin: .5rem, 0, .5rem, 0;
 
     &-link {
       color: $color-primary;
+      font-weight: 400;
 
       &:hover,
       &:focus {

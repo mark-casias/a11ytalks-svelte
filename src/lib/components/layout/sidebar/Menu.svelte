@@ -46,7 +46,8 @@
 @import '../../../styles/global/utils';
 .menu {
 
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
 
   &__list {
     list-style: none;

@@ -18,5 +18,21 @@
 <style lang="scss">
   .sidebar {
     width: 25vw;
+
+    &__inner {
+      position: relative;
+      padding: 1.5rem;
+
+      &::after {
+        background: #757575;
+        position: absolute;
+        content: "";
+        width: 0.0625rem;
+        height: auto;
+        top: 30px;
+        right: -10px;
+        bottom: 30px;
+      }
+    }
   }
 </style>

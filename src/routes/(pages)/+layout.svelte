@@ -6,9 +6,11 @@
   @import '../../lib/styles/base/generic';
 }
 .layout {
-    display: flex;
+    display: inline-grid;
+    grid-template-columns: 2;
 
     main {
+      grid-column: 2;
       margin-left: 2rem;
     }
 

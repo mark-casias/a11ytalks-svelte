@@ -2,6 +2,7 @@
 @import '../../../styles/global/utils';
 
 .copyright {
+  text-align: center;
   color: $color-gray-bg;
   font-size: $typographic-small-font-size;
 }
