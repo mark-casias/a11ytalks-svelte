@@ -5,7 +5,7 @@ export default {
   title: 'Posts/Post Next',
 }
 
-export const PostNext = () => ({
+export const PostNext = (postData) => ({
   Component: PostNextComponent,
   props: {
     props: postData

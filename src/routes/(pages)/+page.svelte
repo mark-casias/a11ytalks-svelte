@@ -1,23 +1,32 @@
 <script>
+  import { paginate, PaginationNav } from 'svelte-paginate'
+
   import PostNext from '../../lib/components/posts/PostNext.svelte';
   import PostTeaser from '../../lib/components/posts/PostTeaser.svelte';
+
   export let data;
   const { next, future, past } = data;
+  let items = [...future, ...past];
+  let currentPage = 1
+  let pageSize = 4
+  $: paginatedItems = paginate({ items, pageSize, currentPage })
 </script>
 
-{#if next.path}
+{#if next}
 <PostNext props={next} />
 {/if}
 
-<ul>
-  {#each future as post }
-    <PostTeaser props={post} />
-  {/each}
-  {#each past as post }
-    <PostTeaser props={post} />
-  {/each}
-</ul>
+{#each paginatedItems as post}
+  <PostTeaser props={post} />
+{/each}
 
-<style lang="scss">
+  <PaginationNav
+    totalItems="{items.length}"
+    pageSize="{pageSize}"
+    currentPage="{currentPage}"
+    limit="{1}"
+    showStepOptions="{true}"
+    on:setPage="{(e) => {
+      currentPage = e.detail.page
+    }}" />
 
-</style>

@@ -2,6 +2,7 @@
   import SvelteMarkdown from 'svelte-markdown'
   export let props;
   const { meta, body } = props;
+  const source = body || '';
   let before = true;
 </script>
 
@@ -10,7 +11,8 @@
   <h2 class="content__subtitle">{meta.subtitle}</h2>
   <div class="content__body">
 
-    <SvelteMarkdown source={body} />
+    <SvelteMarkdown {source} />
+
   </div>
   <div class="content__meta">
     {#if meta.youtube != ''}
@@ -74,6 +76,9 @@
     }
   }
 
+  &__body {
+    line-height: 1.5rem;
+  }
   &__subtitle {
     font-size: $typographic-base-font-size * 1;
     max-width: $layout-post-width;
@@ -143,7 +148,7 @@
 
     &__body {
       font-size: $typographic-base-font-size * 1.125;
-      line-height: 1.125rem;
+      line-height: 1.5rem;
       margin-bottom: 1.125rem;
     }
 

@@ -1,6 +1,5 @@
 import ContentComponent from './Content.svelte';
 import postData from './posts.js';
-console.log(postData);
 
 export default {
   title: 'Posts/Full Post',

@@ -3,7 +3,6 @@
   import Content from "../../../lib/components/posts/Content.svelte";
   import Tags from "../../../lib/components/tags/Tags.svelte";
   const content = data.content;
-  console.log(content);
   const frontmatter = data.node.metadata;
   const tags = frontmatter.tags;
   const props = {

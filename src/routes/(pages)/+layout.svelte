@@ -8,6 +8,7 @@
 .layout {
     display: inline-grid;
     grid-template-columns: 2;
+    padding: 2rem;
 
     main {
       grid-column: 2;

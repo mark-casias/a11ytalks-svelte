@@ -123,7 +123,7 @@
 
   &__description {
     font-size: $typographic-base-font-size;
-    line-height: 1;
+    line-height: 1.25;
     margin-bottom: 0.75rem;
     margin-top: 0.5rem;
     @include breakpoint-md {

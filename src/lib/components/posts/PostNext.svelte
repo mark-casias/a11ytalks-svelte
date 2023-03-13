@@ -35,9 +35,11 @@
 
 .post-next {
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 2rem;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: left;
+  align-items: center;
 
   &__image {
     img {
@@ -54,6 +56,11 @@
 
   }
 
+  &__content {
+    width: 50%;
+    margin-right: 2rem;
+  }
+
   h2 {
     line-height: 1.5rem;
     margin-top: 1rem;
@@ -61,7 +68,7 @@
     text-transform: uppercase;
     color: $color-secondary;
     font-size: $typographic-huge-font-size;
-    font-weight: 900;
+    font-weight: 500;
     clear: both;
 
     @include breakpoint-md {
@@ -97,10 +104,16 @@
     clear: both;
   }
 
+  &__title {
+    margin-top: 1rem;
+  }
+
   &__description {
     margin-right: 0;
     margin-bottom: 1rem;
+    line-height: 1.5;
   }
+
 
   @include breakpoint-md {
     text-align: left;

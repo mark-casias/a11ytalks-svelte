@@ -1,6 +1,5 @@
 <script>
   export let tags;
-  console.log(tags);
 </script>
 
 <div class='tags'>
