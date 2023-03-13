@@ -1,5 +1,5 @@
 <script>
-  import { paginate, PaginationNav } from 'svelte-paginate'
+  import { paginate, LightPaginationNav } from 'svelte-paginate'
 
   import PostNext from '../../lib/components/posts/PostNext.svelte';
   import PostTeaser from '../../lib/components/posts/PostTeaser.svelte';
@@ -9,7 +9,7 @@
   let items = [...future, ...past];
   let currentPage = 1
   let pageSize = 4
-  $: paginatedItems = paginate({ items, pageSize, currentPage })
+  $: paginatedItems = paginate({ items, pageSize, currentPage });
 </script>
 
 {#if next}
@@ -20,13 +20,12 @@
   <PostTeaser props={post} />
 {/each}
 
-  <PaginationNav
-    totalItems="{items.length}"
-    pageSize="{pageSize}"
-    currentPage="{currentPage}"
-    limit="{1}"
-    showStepOptions="{true}"
-    on:setPage="{(e) => {
-      currentPage = e.detail.page
-    }}" />
+  <LightPaginationNav
+    totalItems={items.length}
+    pageSize={pageSize}
+    currentPage={currentPage}
+    limit="1"
+    showStepOptions="true"
+    on:setPage={(e) => currentPage = e.detail.page }
+  />
 

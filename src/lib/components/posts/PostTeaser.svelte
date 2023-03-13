@@ -1,8 +1,9 @@
 <script>
   import { format } from 'date-fns';
   export let props;
-  const { meta, path } = props;
-  const date = format(new Date(meta.date), 'MMMM yyyy')
+  $: meta = props.meta;
+  $: path = props.path;
+  $: date = format(new Date(meta.date), 'MMMM yyyy')
 </script>
 <div class='post-teaser'>
   <div class='post-teaser__meta'>
